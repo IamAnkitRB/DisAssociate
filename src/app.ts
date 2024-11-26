@@ -7,4 +7,8 @@ const app: Application = express();
 app.use(bodyParser.json());
 app.use('/hubspot', hubspotRoutes);
 
+app.get('/health', (req, res)=>{
+    res.send(`Server is up and running`)
+})
+
 export default app;
